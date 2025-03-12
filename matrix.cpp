@@ -76,7 +76,7 @@ class Mat{
       Mat out(rows, columns);
       for (int i = 0; i < rows; i ++){
         for (int j = 0; j < columns; j++){
-          int entry =  Mat::dot(this->data[j], this->col(i), rows);
+          int entry =  Mat::dot(this->data[i], other.col(j), rows);
           out.setAt(i, j, entry);
         }
       }
